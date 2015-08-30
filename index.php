@@ -1,1 +1,2 @@
-<h1>This web is under construction</h1>
+
+<h1>Homu desu yoooo !!! ^_^</h1>
