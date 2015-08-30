@@ -17,7 +17,7 @@
 	margin-top:20px;
 }
 
-.form-login	{
+.form-sign-up	{
 	height: 900px;
 	margin-top: 30px;
 }
@@ -50,3 +50,7 @@
 	font-size: 14px;
 }
 
+.form-login     {
+    	height: 450px;
+	margin-top: 30px;
+}
