@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 		$error .= "<p>Email harus diisi</p>";
 	}
 	
-	if (empty($_POST['password'] || $_POST['password'] != $_POST['password_conf'])) {
+	if (empty($_POST['password']) || $_POST['password'] != $_POST['password_conf']) {
 		$error .= "<p>Password tidak valid</p>";
 	}
 	
