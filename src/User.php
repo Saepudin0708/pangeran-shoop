@@ -20,7 +20,7 @@ class User
 	public function addUser($email, $name, $password, $address, $zip_code, $city, $gender, $phone)
 	{
 		$query = "insert into user (email, name,  password, address, zip_code, city, gender, phone) 
-		value (:email, :name,  md5(:password), :address, :zip_code, :city, :gender, :phone)";
+		value (:email, :name,  :password), :address, :zip_code, :city, :gender, :phone)";
 		$result = $this->db->prepare($query);
 		$result->bindParam(':email', $email);
 		$result->bindParam(':name', $name);
@@ -40,6 +40,15 @@ class User
 		$result->bindParam(':email', $email);
 		$result->execute();
 		return $result->fetch();
+	}
+
+	public function resetPasswordByEmail($password, $email)
+	{
+		$query = ("UPDATE user SET password=:password WHERE email=:email");
+		$result = $this->db->prepare($query);
+		$result->bindParam(':email', $email);
+		$result->bindParam(':password', $password);
+		$result->execute();
 	}
 	
 }
