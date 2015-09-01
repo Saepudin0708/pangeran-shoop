@@ -1,0 +1,1 @@
+ALTER TABLE `user` ADD `confirm` VARCHAR(255) NOT NULL ;

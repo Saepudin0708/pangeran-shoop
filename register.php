@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 		$error .= "<p>Email harus diisi</p>";
 	}
 	
-	if (empty($_POST['password'] || $_POST['password'] != $_POST['password_conf'])) {
+	if (empty($_POST['password']) || $_POST['password'] != $_POST['password_conf']) {
 		$error .= "<p>Password tidak valid</p>";
 	}
 	
@@ -33,33 +33,26 @@ if (isset($_POST['submit'])) {
 			$_POST['zip_code'],
 			$_POST['city'],
 			$_POST['gender'],
-			$_POST['phone']
+			$_POST['phone'],
+			'not_verified'
 		);
 	}
-		if ($User) {
 
-			
-			$to = $_POST['email'];
+	$to = $_POST['email'];
+	$subject = "Activate Your Email";
+	$header = "From: Pangeran Shoop info@pangeranweb.com";
+	$message = "Please click the link below to verify and activate your account. \r\n";
+	$message .= "http://shoop.pangeranweb.com/confirm.php?code=$to";
 
-			$subject = "Activate Your Email";
+	$sentmail = mail($to, $subject, $message, $header);
+		
+	print_r($sentmail);
 
-			$header = "From: Saepudin saepudin.0708@gmail.com";
-
-			$message = "Please click the link below to verify and activate your account. \r\n";
-			$message .= "http://www.yourweb.com/confirm.php";
-
-			$sentmail = mail($to, $subject, $message, $header);
-		} else {
-			echo "Email tidak valid";
-		}
-		print_r($sentmail);
-
-		if ($sentmail) {
-			echo "Your Confirmation Link Has Been Sent to Your Email Address.";
-		} else {
-			echo "Cannot Send Confirmation Link to Your Email Address";
-		}
-	
+	if ($sentmail) {
+		echo "Your Confirmation Link Has Been Sent to Your Email Address.";
+	} else {
+		echo "Cannot Send Confirmation Link to Your Email Address";
+	}
 }
 
 include "view/register.php";
