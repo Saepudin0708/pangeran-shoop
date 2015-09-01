@@ -1,0 +1,71 @@
+[33mcommit 2048dd121cc581689c6cccd076ddeb22a26253a9[m
+Author: mufaticha <mufaticha.edogawa@gmail.com>
+Date:   Mon Aug 31 20:32:39 2015 +0700
+
+    update file new login
+
+[33mcommit 635b266cf54f6e2fed68b441b3a6fa8a5ebb37e5[m
+Author: mufaticha <mufaticha.edogawa@gmail.com>
+Date:   Mon Aug 31 16:39:58 2015 +0700
+
+    new file forgot password and login
+
+[33mcommit e05880c67e038c9c3a46df8061b21e561b00eb04[m
+Author: Akhyar Maulana <akhyarmaulana99@gmail.com>
+Date:   Mon Aug 31 07:59:09 2015 -0500
+
+    fix errpr file register
+
+[33mcommit 4c1bddea285c6a7d65aa30835207d9401dd6bd79[m
+Author: Akhyar Maulana <akhyarmaulana99@gmail.com>
+Date:   Sun Aug 30 20:50:35 2015 +0700
+
+    SQL query create table user
+
+[33mcommit b34dc77872acd5456b022ea1cc36382d9ff17e15[m
+Author: Akhyar Maulana <akhyarmaulana99@gmail.com>
+Date:   Sun Aug 30 20:39:45 2015 +0700
+
+    full feature login and register
+
+[33mcommit 3d99ce9b47ec33d00c74404c9c2e18a95149c772[m
+Merge: 55b14b6 60686af
+Author: Akhyar Maulana <akhyarmaulana99@gmail.com>
+Date:   Sun Aug 30 17:42:29 2015 +0700
+
+    Merge pull request #2 from mufaticha/master
+    
+    thanks for the design :)
+
+[33mcommit 60686aff33850e9d1403b0a6e3c5dd0506d48494[m
+Author: mufaticha <mufaticha.edogawa@gmail.com>
+Date:   Sun Aug 30 17:32:04 2015 +0700
+
+    update layout login
+
+[33mcommit 55b14b6c33841f251b17a3d4b7bd7d100fdd7b69[m
+Author: Akhyar Maulana <akhyarmaulana99@gmail.com>
+Date:   Sun Aug 30 09:44:41 2015 +0700
+
+    this web is under construction
+
+[33mcommit 8b4557079b576eb64cf05e9635a1f655de6f27dd[m
+Merge: a1f17f8 e2ace46
+Author: Akhyar Maulana <akhyarmaulana99@gmail.com>
+Date:   Sun Aug 30 09:24:27 2015 +0700
+
+    Merge pull request #1 from mufaticha/master
+    
+    design sign-up
+
+[33mcommit e2ace46e2d14e811ef9294555c8cecd55b624dd5[m
+Author: mufaticha <mufaticha.edogawa@gmail.com>
+Date:   Sun Aug 30 09:05:30 2015 +0700
+
+    design sign-up
+
+[33mcommit a1f17f8a861a1bc63b411c78b75b7fb09e36a1e0[m
+Author: Akhyar Maulana <akhyarmaulana99@gmail.com>
+Date:   Sun Aug 30 08:57:43 2015 +0700
+
+    Initial commit
