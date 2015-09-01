@@ -1,4 +1,4 @@
-<?php echo '
+<?php /* echo '
 <form action="reset.php" method="post">
 E-mail Address: <input type="text" name="email" size="20" /><br />
 New password: <input type="password" name="password" size="20" /><br />
@@ -8,10 +8,11 @@ if (isset($_GET["q"])) {
 	echo $_GET["q"];
 }
 	echo '" /><input type="submit" name="ResetPasswordForm" value=" Reset Password " />
-	</form>';
+	</form>'; */
+include "reset.php";
 ?>
 
-<?php /* 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -38,7 +39,7 @@ if (isset($_GET["q"])) {
                 <div class="col-lg-6 col-md-6 col-xs-6 form-login">
                     <h3 class="daftar-header">Reset Password</h3>
                     <br>    
-                    <?php if(!empty($error)) : ?>
+                    <?php if(!empty($error1)) : ?>
                     <div class="alert alert-danger alert-dismissible" role="alert">
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                       <?=$error?>
@@ -51,20 +52,16 @@ if (isset($_GET["q"])) {
                         </div>
                         <div class="form-group">
                             <label for="InputPassword">Password</label>
-                            <input type="text" class="form-control" id="password" name="password" placeholder="Your Password">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Your Password">
                         </div>
                         <div class="form-group">
                             <label for="InputConfirmPassword">Confirm Password</label>
-                            <input type="text" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Your Password">
+                            <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Your Password">
                         </div>
-                        <?php echo 
-                        "<input hiden type="hidden" name="q" value="';
-						if (isset($_GET["q"])) {
-							echo $_GET["q"];
-						}
-							echo '" ";?>
-                        	<input type="text">
-                        <button type="submit" class="btn btn-danger" name="ForgotPassword">Reset Password</button>
+                        <input type="hidden" calss="form-control" id="q" name="q" value="<?php if (isset($_GET["q"])) {
+                                    echo $_GET["q"];
+                                    } ?>">
+                            <button type="submit" class="btn btn-danger" name="ResetPasswordForm">Reset Password</button>
                         </form>
                 </div>
                 <div class="col-lg-3 col-md-3 col-xs-6 form-login"></div>
@@ -76,4 +73,3 @@ if (isset($_GET["q"])) {
         <script src="asset/js/bootstrap.min.js"></script>
     </body>
 </html>
-*/?>

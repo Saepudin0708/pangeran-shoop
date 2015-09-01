@@ -1,3 +1,3 @@
 <?php
-	$dbh = new PDO('mysql:host=localhost;dbname=pangeran-shoop', 'root', '');
+	$dbh = new PDO('mysql:host=localhost;dbname=pangeranshoop', 'root', '4121rifani');
 ?>

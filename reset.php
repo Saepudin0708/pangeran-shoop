@@ -2,12 +2,13 @@
 include "src/Koneksi.php";
 include "src/User.php";
 
+
 $user = new User($dbh);
 if (isset($_POST["ResetPasswordForm"]))
 {
 	$email = $_POST["email"];
-	$password = $_POST["password"];
-	$confirmpassword = $_POST["confirmpassword"];
+	$password = md5($_POST["password"]);
+	$confirmpassword = md5($_POST["confirmpassword"]);
 	$hash = $_POST["q"];
 
 	$salt = "498#2D83B631%3800EBD!801600D*7E3CC13";
@@ -16,11 +17,11 @@ if (isset($_POST["ResetPasswordForm"]))
 	if ($resetkey == $hash)
 	{
 		if ($password == $confirmpassword)
-		{
-			$password == hash('sha512', $salt.$password);
+		{	$password == hash('sha512', $salt.$password);
 
-			$user->updateUserPassword($password, $email);
-			echo "Your Password Has been succsesfully reset";
+			$user->resetPasswordByEmail($password, $email);
+			echo "Your Password Has been succsesfully reset<br>";
+			echo "<a href='login.php'>Go To login<a>";
 		}
 		else
 		{

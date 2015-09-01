@@ -45,6 +45,7 @@
                             <input type="password" class="form-control" id="InputPassword1" name="password" placeholder="Masukkan Password">
                         </div>
                         <button type="submit" class="btn btn-danger" name="submit">Login</button>
+                        <a href="forgot_password.php">Forgot Password...!!!</a>
                     </form>
                 </div>
                 <div class="col-lg-3 col-md-3 col-xs-6 form-login"></div>
