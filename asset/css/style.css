@@ -1,62 +1,62 @@
 .header	{
-	background-color: #F08080;
-	height: 130px;
+    background-color: #F08080;
+    height: 130px;
 }
 
 .header h1 {
-	font-size: 70px;
-	text-align: center;
-	font-family: "calibri";
-	color: #E6E6FA;
-	font-weight: lighter;
+    font-size: 70px;
+    text-align: center;
+    font-family: "calibri";
+    color: #E6E6FA;
+    font-weight: lighter;
 }
 
 .daftar-header {
-	color:#FFC0CB;
-	font-size: 40px;
-	margin-top:20px;
+    color:#FFC0CB;
+    font-size: 40px;
+    margin-top:20px;
 }
 
 .form-sign-up	{
-	min-height: 900px;
-	margin-top: 30px;
+    min-height: 900px;
+    margin-top: 30px;
 }
 
 .footer	{
-	background-color: #F08080;
-	height: 100px;
-	margin-top: 30px;
+    background-color: #F08080;
+    height: 100px;
+    margin-top: 30px;
 }
 
 .text-footer	{
-	font-family: "calibri";
+    font-family: "calibri";
 }
 
 .addr	{
-	color: #fff;
-	font-family: "calibri"; 
+    color: #fff;
+    font-family: "calibri"; 
 }
 
 .contact	{
-	color: #fff;
-	font-family: "calibri"; 
+    color: #fff;
+    font-family: "calibri"; 
 }
 
 .form-group	{
-	font-size: 17px;
+    font-size: 17px;
 }
 
 .form-gambar	{
-	font-size: 14px;
+    font-size: 14px;
 }
 
 .form-login     {
     height: 450px;
-	margin-top: 30px;
+    margin-top: 30px;
 }
 
 .table th {
-	background-color: #F08080;
+    background-color: #F08080;
     color: white;
 }
 
@@ -75,4 +75,53 @@
 .text-right {
     text-align: center;
 }
- 
+.navbar .navbar-default {
+    z-index: 10001;
+    width: 100%;
+}
+
+.navbar  {
+    background-color: #F08080;
+}
+
+.navbar-brand   {
+    font-size: 30px;
+}
+
+.nav .navbar-nav li {
+    display: inline-block;
+}
+
+.navbar-brand p    {
+    color: #E6E6FA;
+}
+
+.navbar-default .navbar-nav > li > a    {
+    color: #FFF;
+    font-size: 15px;
+}
+
+#header {
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-product  {
+    text-align: center;
+}
+
+.caption    {
+    text-align: center;
+    color:#660066;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#footer {
+    background-color: #F08080;
+    margin-top: 30px;
+    text-align: center;
+    
+}
