@@ -29,7 +29,7 @@
         public function addUser($email, $name, $password, $address, $zip_code, $city, $gender, $phone)
         {
             $query = "insert into user (email, name,  password, address, zip_code, city, gender, phone) 
-            value (:email, :name,  md5(:password), :address, :zip_code, :city, :gender, :phone)";
+            value (:email, :name, :password, :address, :zip_code, :city, :gender, :phone)";
             $result = $this->db->prepare($query);
             $result->bindParam(':email', $email);
             $result->bindParam(':name', $name);

@@ -3,6 +3,7 @@ include "src/Koneksi.php";
 include "src/User.php";
 
 $error = "";
+$error_two = "";
 $User = new User($dbh);
 
 
@@ -49,9 +50,9 @@ if (isset($_POST['submit'])) {
 	print_r($sentmail);
 
 	if ($sentmail) {
-		echo "Your Confirmation Link Has Been Sent to Your Email Address.";
+		$error_two .= "<p>Your Confirmation Link Has Been Sent to Your Email Address.</p>";
 	} else {
-		echo "Cannot Send Confirmation Link to Your Email Address";
+		$error_two .= "<p>Cannot Send Confirmation Link to Your Email Address.</p>";
 	}
 }
 
