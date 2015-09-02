@@ -20,16 +20,20 @@ if (isset($_POST["ForgotPassword"])) {
 
 		$password= hash('sha512', $salt.$userExist["email"]);
 
-		$pwrurl = "shoop.pangeranweb.php?q=".$password;
+		//$pwrurl = "localhost/pangeran-shoop/reset_password.php?q=".$password;
 
-		$mailbody = "Dear user,\n\nIf this e-mail does not apply to you please ignore it.
+		echo "<a href='reset_password.php?q=$password'>click link for reset your password</a>";
+
+		/*$mailbody = "Dear user,\n\nIf this e-mail does not apply to you please ignore it.
 		It appears that you have requested a password reset at our website
 		shoop.pangeranweb.com\n\nTo reset your password, please click the link below.
 		If you cannot click it, please paste it into your web browser's 
 		address bar.\n\n" . $pwrurl . "\n\nThanks,\nThe Administration";
-		mail($userExists["email"], "shoop.pangeranweb.com - Password Reset", $mailbody);
+		
+		mail($userExist["email"], "shoop.pangeranweb.com - Password Reset", $mailbody);
+		
         echo "Your password recovery key has been sent to your e-mail address.";
-        
+        */
 	    }
 	    else
         echo "No user with that e-mail address exists.";
