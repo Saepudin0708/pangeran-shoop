@@ -4,6 +4,6 @@
     
     $produk = new Produk($dbh);
     $hasil = $produk->getProduk();
-    
-    include "homepage1.html";    
+
+    include "index.html";
 ?>

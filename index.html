@@ -48,8 +48,8 @@
                         <li><a href="#">Hubungi Kami</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Masuk</a></li>
-                        <li><a href="#">Daftar</a></li>
+                        <li><a href="login.php">Masuk</a></li>
+                        <li><a href="register.php">Daftar</a></li>
                     </ul>
                 </div>
             </div><!-- /.navbar-collapse -->
@@ -66,78 +66,18 @@
             </div>
     <div class="container">
         <div class="row">
+        <?php foreach ($hasil as $row) : ?>
             <div class="col-sm-3 col-md-3 col-lg-3">
                 <div class="">
-                    <h3 class="title-product">Nama Barang</h3>
+                    <h3 class="title-product"><?=$row['nama']?></h3>
                     <img src="asset/img/product1.jpg" width="100%" alt="...">
                     <div class="caption">
-                        <p>Rp 100.000</p>
+                        <p>Rp. <?=$row['harga']?></p>
+                            <a href='cart.php?id=<?=$rows['id_produk']?>' class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <div class="">
-                    <h3 class="title-product">Nama Barang</h3>
-                    <img src="asset/img/product1.jpg" width="100%" alt="...">
-                    <div class="caption">
-                        <p>Rp 100.000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <div class="">
-                    <h3 class="title-product">Nama Barang</h3>
-                    <img src="asset/img/product1.jpg" width="100%" alt="...">
-                    <div class="caption">
-                        <p>Rp 100.000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <div class="">
-                    <h3 class="title-product">Nama Barang</h3>
-                    <img src="asset/img/product1.jpg" width="100%" alt="...">
-                    <div class="caption">
-                        <p>Rp 100.000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <div class="">
-                    <h3 class="title-product">Nama Barang</h3>
-                    <img src="asset/img/product1.jpg" width="100%" alt="...">
-                    <div class="caption">
-                        <p>Rp 100.000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <div class="">
-                    <h3 class="title-product">Nama Barang</h3>
-                    <img src="asset/img/product1.jpg" width="100%" alt="...">
-                    <div class="caption">
-                        <p>Rp 100.000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <div class="">
-                    <h3 class="title-product">Nama Barang</h3>
-                    <img src="asset/img/product1.jpg" width="100%" alt="...">
-                    <div class="caption">
-                        <p>Rp 100.000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <div class="">
-                    <h3 class="title-product">Nama Barang</h3>
-                    <img src="asset/img/product1.jpg" width="100%" alt="...">
-                    <div class="caption">
-                        <p>Rp 100.000</p>
-                    </div>
-                </div>
-            </div>
+        <?php endforeach ?>
         </div>
     </div>
     <footer id="footer"><br>
